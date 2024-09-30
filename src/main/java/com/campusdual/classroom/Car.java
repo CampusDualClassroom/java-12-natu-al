@@ -91,18 +91,17 @@ public class Car {
     }
 
     public void setReverse(boolean reverse) {
-        if (this.reverse && this.speedometer == 0) {
-            this.reverse = true;
-            this.gear = "R";  // marcha en retro
-        } else if (!reverse) {
-            this.reverse = false;
-            this.gear = "D"; // marcha activa
+        if (this.speedometer == 0) {
+            this.reverse = reverse;
+            if (reverse) {
+                this.gear = "R";  // marcha en retro
+            } else {
+                this.gear = "N"; // marcha en neutro
+            }
         } else {
-            System.out.println("No se puede poner marcha atrás mientras el coche está en movimientio ");
-
+            System.out.println("No se puede poner marcha atrás mientras el coche está en movimiento.");
         }
     }
-
 
     public void showDetails() {
         System.out.println("Coche{" +

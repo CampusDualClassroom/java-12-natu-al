@@ -29,7 +29,6 @@ public class Exercise12 {
         coche.accelerate();
 
         // 7. Acelerar hasta intentar superar la velocidad máxima (y comprobar que no se puede)
-
         for (int i = 0; i < 5; i++) {
             coche.accelerate();
         }
